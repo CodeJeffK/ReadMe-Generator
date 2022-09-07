@@ -1,48 +1,79 @@
+// TODO: Create a function to generate markdown for README
+class MarkDown{
+
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+  static renderLicenseBadge(license) {
+    const badges = {
+      MIT: `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`,
+      APACHE: `[![License: APACHE](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`,
+      BSD: `[![License: BSD](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`,
+      CC0: `[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)`,
+    }
+    return badges[license]
+  }
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+  static renderLicenseLink(license) {
+    const licenseLinks = {
+      MIT: `[MIT](https://opensource.org/licenses/MIT)`,
+      APACHE: `[APACHE](https://opensource.org/licenses/Apache-2.0)`, 
+      BSD: `[BSD](https://opensource.org/licenses/BSD-3-Clause)`,
+      CC0: `[CC0](http://creativecommons.org/publicdomain/zero/1.0/)`,
+    }
+    return licenseLinks[license]
+  }
+
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+  static renderLicenseSection(license) {
+    if (license) {
+      return `Licensed under the ${this.renderLicenseLink(license)} license.`
+    } else {
+      return ''
+    }
+  }
 
-// TODO: Create a function to generate markdown for README
-class MarkDown{
+
+
+
+// Generate READEME.md function
   static generateMarkdown(answers) {
     return `
-  # ${answers.title}  
+# ${answers.title}
 
-  ## Table of Contents
-  - [Project description](#Description)
-  - [Installation](#Installation)
-  - [Usage](#Usage)
-  - [Credits](#Credits)
-  - [Questions](#Questions)
-  - [License](#License)
+${this.renderLicenseBadge(answers.license)}
 
-  ## Description
-  ${answers.description}
+## Table of Contents
+- [Project Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [Questions](#questions)
+- [License](#license)
 
-  ## Installation
-  ${answers.installtion}
+## Description
+${answers.description}
 
-  ## Usage
-  ${answers.usage}
+## Installation
+${answers.installation}
 
-  ## Credits
-  ${answers.credits}
+## Usage
+${answers.usage}
 
-  ## Questions
-  ${answers.email}
-  ${answers.github}
+## Credits
+${answers.credits}
 
-  ## License
-  ${answers.license}
+## Questions
+${answers.email}
+${answers.github}
 
+## License
+${this.renderLicenseSection(answers.license)}
   `
   }
 }
