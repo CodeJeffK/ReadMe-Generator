@@ -8,14 +8,14 @@
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/Noahbrown26/READMEgenerator.git"
+      "url": "git+https://github.com/CodeJeffK/ReadMe-Generator.git"
     },
-    "author": "Noah Brown",
+    "author": "Jeff Kasahara",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/Noahbrown26/READMEgenerator/issues"
+      "url": "https://github.com/CodeJeffK/ReadMe-Generator/issues"
     },
-    "homepage": "https://github.com/Noahbrown26/READMEgenerator#readme",
+    "homepage": "https://github.com/CodeJeffK/ReadMe-Generator#readme",
     "dependencies": {
       "fs": "^0.0.1-security",
       "inquirer": "8.2.4"
