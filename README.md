@@ -17,7 +17,7 @@
   * Your file should be created after all prompts are filled out
   
   ## Usage
-  You can view a walkthrough video of the application [here](https://drive.google.com/file/d/1iog4bkhAdF2pSCns-81GziOZ3qOJkbwR/view)
+  You can view a walkthrough video of the application [here](https://drive.google.com/file/d/1sIsW32x4Wd7-WAy7t4-R8Ou-f6PeoX1x/view)
   
   ## Questions
   Any Questions? Please reachout to me at jkasahara206@gmail.com
