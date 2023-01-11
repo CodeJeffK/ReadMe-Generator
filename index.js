@@ -1,15 +1,15 @@
-// Include packages needed for this application //
+// Include packages needed for this application
 
 const inquirer = require('inquirer');
 const fs = require('fs');
 const { writeFile } = require('./assets/generateMarkdown.js');
 
-// Create an array of questions for user input // 
+// Create an array of questions for user input 
 
 const userPrompt = () => {
     return inquirer.prompt([
 
-        // Question 1 (title name) //
+        // Question 1 (title name)
 
     {
         type: 'input',
@@ -25,7 +25,7 @@ const userPrompt = () => {
         }
     },
 
-        // Question 2 (project description) //
+        // Question 2 (project description)
 
         {
             type: 'input',
@@ -41,7 +41,7 @@ const userPrompt = () => {
             }
         },
 
-        // Question 3 (installation steps) //
+        // Question 3 (installation steps)
 
         {
             type: 'input',
@@ -57,7 +57,7 @@ const userPrompt = () => {
             }
         },
 
-        // Question 4 (how to use) //
+        // Question 4 (how to use)
 
         {
             type: 'input',
@@ -73,7 +73,7 @@ const userPrompt = () => {
             }
         },
 
-        // Question 5 (Contributions) //
+        // Question 5 (Contributions)
 
         {
             type: 'input',
@@ -89,7 +89,7 @@ const userPrompt = () => {
             }
         },
 
-        // Question 6 (testing) //
+        // Question 6 (testing)
 
         {
             type: 'input',
@@ -105,7 +105,7 @@ const userPrompt = () => {
             },
           },
 
-          // Question 7 (Licenses) //
+          // Question 7 (Licenses)
 
           {
             type: 'list',
@@ -122,7 +122,7 @@ const userPrompt = () => {
             },
           },
 
-          // Question 8 (Github Username) //
+          // Question 8 (Github Username)
 
           {
             type: 'input',
@@ -138,7 +138,7 @@ const userPrompt = () => {
             },
           },
 
-          // Question 9 (Email address) //
+          // Question 9 (Email address)
 
           {
             type: 'input',
@@ -157,7 +157,7 @@ const userPrompt = () => {
         ]);
     };
 
-// Create a function to initialize app // 
+// Create a function to initialize app
 
 function init() {
     userPrompt().then((data) => {
@@ -165,6 +165,6 @@ function init() {
     });
   }
 
-// Function call to initialize app //
+// Function call to initialize app
 
 init();
